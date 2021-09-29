@@ -5,6 +5,16 @@ TagManager:
   serializedVersion: 2
   tags:
   - Objetos
+  - Fire
+  - Grafeno
+  - Alga
+  - Antena5G
+  - Impresora 3d
+  - Impresora circuitos
+  - Robot
+  - El despachador
+  - Reciclaje
+  - Carcasa
   layers:
   - Default
   - TransparentFX
