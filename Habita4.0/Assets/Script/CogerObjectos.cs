@@ -28,7 +28,7 @@ public class CogerObjectos : MonoBehaviour
         }
         else if (objetoCogido != null)
         {
-            if (Input.GetKeyDown(KeyCode.Q))
+            if (Input.GetKeyDown(KeyCode.E))
             {
 
                 objetoCogido.GetComponent<Objetos>().coger = true;
