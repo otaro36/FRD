@@ -21,6 +21,5 @@ public class Impresora3d : MonoBehaviour
         {
             Destroy(other.gameObject);
         }
-
     }
 }
