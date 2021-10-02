@@ -71,6 +71,7 @@
     <Compile Include="Assets\Script\ObjetosRecoger.cs" />
     <Compile Include="Assets\Script\Objetos.cs" />
     <Compile Include="Assets\Script\ImpresoraCircuitos.cs" />
+    <Compile Include="Assets\Script\RelojGeneral.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />
