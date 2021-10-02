@@ -62,6 +62,7 @@
     <Compile Include="Assets\Script\CogerObjectos.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\LevelReset.cs" />
     <Compile Include="Assets\Script\Impresora.cs" />
+    <Compile Include="Assets\Script\RelojGeneral.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\Script\Impresora3d.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\CameraSwitch.cs" />
@@ -71,7 +72,9 @@
     <Compile Include="Assets\Script\ObjetosRecoger.cs" />
     <Compile Include="Assets\Script\Objetos.cs" />
     <Compile Include="Assets\Script\ImpresoraCircuitos.cs" />
-    <Compile Include="Assets\Script\RelojGeneral.cs" />
+    <Compile Include="Assets\Script\MoveRobot.cs" />
+    <Compile Include="Assets\RobotComeCubos.cs" />
+    <Compile Include="Assets\MesadeRecoleccion.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />

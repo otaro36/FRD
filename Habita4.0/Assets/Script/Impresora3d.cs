@@ -23,67 +23,43 @@ public class Impresora3d : MonoBehaviour
     public GameObject destruido;
     public Slider tiempoCreacion;
     public int objetoCreado;
-    public int objeto1;
-    public int objeto2;
-    public int objeto3;
-    public int objeto4;
-    public int impresiones;
-    public float timePreparacion;
     public float time;
     private void Update()
     {
-        objetoCreado = objeto1 + objeto2;
-        if (objetoCreado!=0)
-        {
-            StartCoroutine("Convinaciones");
-            switch (impresiones)
+            switch (objetoCreado)
             {
                 case 1:
-                    StartCoroutine("Impresion");
-                    objeto1 = 0;
-                    objeto2 = 0;
+                    StartCoroutine("Carcasa");
                     objetoCreado = 0;
                     break;
-                case 3:
+                case 2:
                     StartCoroutine("Olivo");
-                    objeto1 = 0;
-                    objeto2 = 0;
                     objetoCreado = 0;
                     break;
             }
-            
-
-        }
-        print(0);
-        
-
     }
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag== "Alga")
         {
             colliAlga = other.gameObject;
-            objeto1 = 1;
+            objetoCreado = 1;
         }
         else if (other.tag== "Grafeno")
         {
             colliGrafeno = other.gameObject;
-            objeto2 = 2;
+            objetoCreado = 2;
         }
         else if (other.tag!="Player"&&other.tag!="Impresora3d")
         {
             destruido = other.gameObject;
+            Instantiate(antena5G, instanciaAntena.position, Quaternion.identity);
             Destroy(other.gameObject);
         }
     }
-    IEnumerator Convinaciones()
+    IEnumerator Carcasa()
     {
-        yield return new WaitForSecondsRealtime(10f);
-        impresiones = objetoCreado;
-        print(1);
-    }
-    IEnumerator Impresion()
-    {
+        yield return new WaitForSecondsRealtime(5F);
         Destroy(colliAlga.gameObject);
         yield return new WaitForSecondsRealtime(0.2f);
         Instantiate(carcasa, instanciaImpresora3D.position, Quaternion.identity);
@@ -92,12 +68,11 @@ public class Impresora3d : MonoBehaviour
     }
     IEnumerator Olivo()
     {
+        yield return new WaitForSecondsRealtime(5F);
         Destroy(colliGrafeno.gameObject);
-        Destroy(colliAlga.gameObject);
         yield return new WaitForSecondsRealtime(0.2f);
         Instantiate(olivo, instanciaImpresora3D.position, Quaternion.identity);
         yield return new WaitForSecondsRealtime(time);
-        Instantiate(aglinato, instanciaAglinato.position, Quaternion.identity);
-        Instantiate(aglinato, instanciaAglinato.position, Quaternion.identity);
+        Instantiate(grafeno, instanciaGrafeno.position, Quaternion.identity);
     }
 }
