@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="Assets\SampleScenes\Scripts\ParticleSceneControls.cs" />
     <Compile Include="Assets\Script\MesadeRecoleccion.cs" />
+    <Compile Include="Assets\Script\AA.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\SceneAndURLLoader.cs" />
     <Compile Include="Assets\Script\CogerObjectos.cs" />
@@ -80,7 +81,8 @@
     <Compile Include="Assets\Script\ObjetosRecoger.cs" />
     <Compile Include="Assets\Script\Objetos.cs" />
     <Compile Include="Assets\Script\ImpresoraCircuitos.cs" />
-    <Compile Include="Assets\Script\AA.cs" />
+    <Compile Include="Assets\Script\ScriptableObject\DesbloqueoNIveles.cs" />
+    <Compile Include="Assets\NivelesBloqueados.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />

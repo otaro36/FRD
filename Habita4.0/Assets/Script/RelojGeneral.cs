@@ -8,7 +8,9 @@ public class RelojGeneral : MonoBehaviour
     public float tiempo;
     public Text tiempotxt;
     public GameObject player;
-    public GameObject canvas;
+    public GameObject panel;
+    public GameObject botonNivelSuperado;
+    public GameObject botonNivelNoSuperado;
     public EscenaManager nivel_superado;
     public Entregador monedas;
     public int minimoPuntaje;
@@ -33,12 +35,15 @@ public class RelojGeneral : MonoBehaviour
         {
             tiempotxt.text = 0 + ":" + 0;
 
+            player.GetComponent<CharacterController>().enabled = false;
+            panel.SetActive(true);
             if (monedas.total >= minimoPuntaje)
             {
-                nivel_superado.Desbloquear_Nivel();
-                StartCoroutine("PasarNivel");
-                nivel_superado.CambiarNivel(1);
-                
+                botonNivelSuperado.SetActive(true);
+            }
+            else
+            {
+                botonNivelNoSuperado.SetActive(true);
             }
         }
 
@@ -50,11 +55,5 @@ public class RelojGeneral : MonoBehaviour
         int minutos = (int)tiempo / 60;
         int segundos = (int)tiempo % 60;
         tiempotxt.text = minutos.ToString() + ":" + segundos.ToString().PadLeft(2, '0');
-    }
-    IEnumerator PasarNivel()
-    {
-        player.GetComponent<CharacterController>().enabled = false;
-        canvas.SetActive(true);
-        yield return new WaitForSecondsRealtime(10f);
     }
 }
