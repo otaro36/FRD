@@ -158,6 +158,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coger: 1
+  creado: 1
 --- !u!1 &4509350271480543478
 GameObject:
   m_ObjectHideFlags: 0

@@ -39,9 +39,7 @@ public class Entregador : MonoBehaviour
     {
         if (other.tag==receta[i].tag)
         {
-            precioCarcasa += 100;
-            total = precioCarcasa;
-            monedas.text = total.ToString();
+            total += 100;
             Destroy(other.gameObject);
             i++;
             if (i>1)
@@ -52,8 +50,9 @@ public class Entregador : MonoBehaviour
         else if (other.tag!=receta[i].tag&&other.tag!="Player")
         {
             Destroy(other.gameObject);
-            precioCarcasa -= 100;
-            monedas.text = total.ToString();
+            total -= 100;
+            
         }
+        monedas.text = total.ToString();
     }
 }
