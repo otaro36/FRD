@@ -5,17 +5,19 @@ using UnityEngine;
 public class ImpresoraCircuitos : MonoBehaviour
 {
     public GameObject obleadeCircuitos;
-    public Transform instanciaOblea;
-    public GameObject material;
-    public GameObject creado;
+    public GameObject grafeno;
+    public GameObject fabrica;
+    public Transform instanciaCarcasa;
+    public Transform instanciaAglinato;
     public int objetoCreado;
-
+    public float time;
     private void Update()
     {
         switch (objetoCreado)
         {
             case 1:
                 StartCoroutine("Impresion");
+                Instantiate(grafeno, instanciaAglinato.position, Quaternion.identity);
                 objetoCreado = 0;
                 break;
         }
@@ -24,7 +26,7 @@ public class ImpresoraCircuitos : MonoBehaviour
     {
         if (other.tag == "Grafeno")
         {
-            material = other.gameObject;
+            fabrica = other.gameObject;
             objetoCreado = 1;
         }
         else if (other.tag != "Player" && other.tag != "Impresora3d")
@@ -34,9 +36,11 @@ public class ImpresoraCircuitos : MonoBehaviour
     }
     IEnumerator Impresion()
     {
-        objetoCreado = 0;
-        Destroy(material.gameObject);
-        yield return new WaitForSecondsRealtime(5F);
-        creado = Instantiate(obleadeCircuitos, instanciaOblea.position, Quaternion.identity);
+
+        yield return new WaitForSecondsRealtime(time);
+        Destroy(fabrica.gameObject);
+        yield return new WaitForSecondsRealtime(0.2f);
+        Instantiate(obleadeCircuitos, instanciaCarcasa.position, Quaternion.identity);
+        yield return new WaitForSecondsRealtime(time);
     }
 }
