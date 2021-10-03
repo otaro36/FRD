@@ -14,7 +14,7 @@ public class RelojGeneral : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        tiempo = 2000;
+        tiempo = 120;
         tiempotxt.text = "2:00";
     }
 
