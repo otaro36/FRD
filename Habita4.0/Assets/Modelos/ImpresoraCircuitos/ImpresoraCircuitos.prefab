@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 3899069565896878549}
   - component: {fileID: 7232522880223338424}
   - component: {fileID: 26182329640431210}
-  - component: {fileID: 1948903036555774246}
   - component: {fileID: 1948903036555774247}
   m_Layer: 0
   m_Name: Impresora circuitos
@@ -84,20 +83,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &1948903036555774246
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1948903036555774245}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 9076540830444123939, guid: ad22475296bf2934c9f66d0f7a79a838, type: 3}
 --- !u!114 &1948903036555774247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,7 +113,6 @@ GameObject:
   - component: {fileID: 2434221414944331060}
   - component: {fileID: 2434221414944331063}
   - component: {fileID: 2434221414944331062}
-  - component: {fileID: 2434221414944331061}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -201,20 +185,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &2434221414944331061
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2434221414944331067}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -5495902117074765545, guid: 8ec6c408416ac274b89b1edf1ec0b64a, type: 3}
 --- !u!1 &2434221415409416284
 GameObject:
   m_ObjectHideFlags: 0

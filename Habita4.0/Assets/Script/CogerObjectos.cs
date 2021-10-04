@@ -7,6 +7,7 @@ public class CogerObjectos : MonoBehaviour
     public GameObject cogerObjeto;
     public GameObject objetoCogido;
     public Transform zonaInteraccion;
+    public Animator anim;
 
 
     // Update is called once per frame
@@ -17,6 +18,7 @@ public class CogerObjectos : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 //objetoCogido = cogerObjeto;
+                anim.SetBool("Coger", true);
                 objetoCogido = Instantiate(cogerObjeto, zonaInteraccion.position, Quaternion.identity);
                 objetoCogido.GetComponent<Objetos>().coger = false;
                 objetoCogido.GetComponent<Objetos>().creado = true;
@@ -30,8 +32,10 @@ public class CogerObjectos : MonoBehaviour
         }
         else if (cogerObjeto != null && cogerObjeto.GetComponent<Objetos>().coger == true && cogerObjeto.GetComponent<Objetos>().creado == true && objetoCogido == null)
         {
+
             if (Input.GetKeyDown(KeyCode.Space))
             {
+                anim.SetBool("Coger", true);
                 objetoCogido = cogerObjeto;
                 objetoCogido.GetComponent<Objetos>().coger = false;
                 objetoCogido.transform.SetParent(zonaInteraccion);
@@ -46,7 +50,7 @@ public class CogerObjectos : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-
+                anim.SetBool("Coger", false);
                 objetoCogido.GetComponent<Objetos>().coger = true;
                 objetoCogido.transform.SetParent(null);
                 objetoCogido.GetComponent<Rigidbody>().useGravity = true;

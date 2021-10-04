@@ -7,6 +7,8 @@ public class RelojGeneral : MonoBehaviour
 {
     public float tiempo;
     public Text tiempotxt;
+    public Sprite[] estrellas;
+    public Image estrel;
     public GameObject player;
     public GameObject panel;
     public GameObject botonNivelSuperado;
@@ -30,6 +32,7 @@ public class RelojGeneral : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        estrel.sprite = estrellas[1];
         CalcularTiempo();
         if (tiempo<=0)
         {
@@ -37,9 +40,22 @@ public class RelojGeneral : MonoBehaviour
 
             player.GetComponent<CharacterController>().enabled = false;
             panel.SetActive(true);
+            estrel.sprite = estrellas[0];
             if (monedas.total >= minimoPuntaje)
             {
                 botonNivelSuperado.SetActive(true);
+                if (monedas.total==minimoPuntaje)
+                {
+                    estrel.sprite = estrellas[1];
+                }
+                else if (monedas.total>=minimoPuntaje*2&&monedas.total<minimoPuntaje*5)
+                {
+                    estrel.sprite = estrellas[2];
+                }
+                else if (monedas.total>=minimoPuntaje*5)
+                {
+                    estrel.sprite = estrellas[3];
+                }
             }
             else
             {

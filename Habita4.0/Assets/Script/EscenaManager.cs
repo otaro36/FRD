@@ -28,7 +28,7 @@ public class EscenaManager : MonoBehaviour
     }
     IEnumerator PausaEscena()
     {
-        yield return new WaitForSecondsRealtime(10f);
+        yield return new WaitForSecondsRealtime(0.5f);
         SceneManager.LoadScene("menu niveles");
     }
 }
