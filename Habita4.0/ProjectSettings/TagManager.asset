@@ -18,6 +18,7 @@ TagManager:
   - Impresora3d
   - ObleaCircuitos
   - Olivo
+  - CeldaEnergia
   layers:
   - Default
   - TransparentFX
