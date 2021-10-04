@@ -63,6 +63,7 @@
     <Compile Include="Assets\SampleScenes\Menu\Scripts\SceneAndURLLoader.cs" />
     <Compile Include="Assets\Script\CogerObjectos.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\LevelReset.cs" />
+    <Compile Include="Assets\Tutorial.cs" />
     <Compile Include="Assets\Script\Impresora.cs" />
     <Compile Include="Assets\Script\RelojGeneral.cs" />
     <Compile Include="Assets\Timer.cs" />
@@ -83,7 +84,6 @@
     <Compile Include="Assets\Script\ObjetosRecoger.cs" />
     <Compile Include="Assets\Script\Objetos.cs" />
     <Compile Include="Assets\Script\ImpresoraCircuitos.cs" />
-    <Compile Include="Assets\Tutorial.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />
@@ -313,6 +313,12 @@
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0\Runtime\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.13f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Common">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.13f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Common.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.13f1\Editor\Data\NetStandard\ref\2.0.0\netstandard.dll</HintPath>
