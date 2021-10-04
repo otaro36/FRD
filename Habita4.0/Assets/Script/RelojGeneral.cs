@@ -23,7 +23,7 @@ public class RelojGeneral : MonoBehaviour
     }
     void Start()
     {
-        tiempo = 30;
+        tiempo = 60;
         //tiempotxt.text = "2:00";
     }
 
