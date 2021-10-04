@@ -8,10 +8,7 @@ public class MesaRobot : MonoBehaviour
     public GameObject carcasa;
     public GameObject celdaEnergia;
     public Transform instancia;
-    public Animator encendido;
-    public Animator recolecta;
-    public Animator procesado;
-    public Animator entrega;
+    public Animator animaRobot;
     public int mezclas;
     public int placa;
     public int carca;
@@ -56,20 +53,20 @@ public class MesaRobot : MonoBehaviour
     IEnumerator CeldaEnergia()
     {
 
-        recolecta.SetBool("recolecta", true);
+        animaRobot.SetBool("recolecta", true);
         yield return new WaitForSecondsRealtime(1f);
         Destroy(placacircuitos);
         Destroy(carcasa);
         yield return new WaitForSecondsRealtime(1f);
-        recolecta.SetBool("procesado", true);
+        animaRobot.SetBool("procesado", true);
         yield return new WaitForSecondsRealtime(5f);
-        recolecta.SetBool("entrega", true);
+        animaRobot.SetBool("entrega", true);
         yield return new WaitForSecondsRealtime(1f);
         Instantiate(celdaEnergia, instancia.position, Quaternion.identity);
-        recolecta.SetBool("encendido", true);
-        recolecta.SetBool("recolecta", false);
-        recolecta.SetBool("procesado", false);
-        recolecta.SetBool("entrega", false);
+        animaRobot.SetBool("encendido", true);
+        animaRobot.SetBool("recolecta", false);
+        animaRobot.SetBool("procesado", false);
+        animaRobot.SetBool("entrega", false);
 
 
 

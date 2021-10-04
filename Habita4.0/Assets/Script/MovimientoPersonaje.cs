@@ -19,10 +19,7 @@ public class MovimientoPersonaje : MonoBehaviour
     public float fallVelocity;
     public Animator anim;
     // Start is called before the first frame update
-    void Start()
-    {
-        anim = GetComponent<Animator>();
-    }
+
 
     // Update is called once per frame
     void Update()
@@ -30,6 +27,14 @@ public class MovimientoPersonaje : MonoBehaviour
 
         horizontal = Input.GetAxis("Horizontal");
         vertical = Input.GetAxis("Vertical");
+        if (horizontal!=0||vertical!=0)
+        {
+            anim.SetBool("MovObj", true);
+        }
+        else
+        {
+            anim.SetBool("MovObj", false);
+        }
         playerInput = new Vector3(horizontal, 0, vertical);
         playerInput = Vector3.ClampMagnitude(playerInput, 1);
         CamDirection();
