@@ -12,6 +12,7 @@ public class Entregador : MonoBehaviour
     public int i;
     public int precioCarcasa;
     public int total;
+    public Animator anim;
     
     // Start is called before the first frame update
     void Start()
@@ -49,9 +50,14 @@ public class Entregador : MonoBehaviour
         }
         else if (other.tag!=receta[i].tag&&other.tag!="Player")
         {
+
             Destroy(other.gameObject);
             total -= 100;
             
+        }
+        else if (other.tag== "Player")
+        {
+            anim.SetBool("Coger",false);
         }
         monedas.text = total.ToString();
     }
