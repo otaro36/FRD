@@ -1,6 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - Audio
     - CogerObjectos
     - DesbloqueoNIveles
     - Entregador
@@ -13,6 +14,7 @@ ScriptsOnlyBuild:
     - Objetos
     - RelojGeneral
     - Timer
+    - Tutorial
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     UnityEditor.Graphs.dll:
@@ -61,7 +63,11 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 74
       Script: {instanceID: 0}
-    - Class: 89
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
       Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
@@ -78,35 +84,37 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1490}
     - Class: 114
-      Script: {instanceID: 2108}
+      Script: {instanceID: 2166}
     - Class: 114
-      Script: {instanceID: 2408}
+      Script: {instanceID: 2466}
     - Class: 114
-      Script: {instanceID: 2532}
+      Script: {instanceID: 2590}
     - Class: 114
-      Script: {instanceID: 2694}
+      Script: {instanceID: 2622}
     - Class: 114
-      Script: {instanceID: 2710}
+      Script: {instanceID: 2754}
     - Class: 114
-      Script: {instanceID: 2714}
+      Script: {instanceID: 2770}
     - Class: 114
-      Script: {instanceID: 3008}
+      Script: {instanceID: 2774}
     - Class: 114
-      Script: {instanceID: 3158}
+      Script: {instanceID: 3068}
     - Class: 114
-      Script: {instanceID: 3252}
+      Script: {instanceID: 3218}
     - Class: 114
-      Script: {instanceID: 3448}
+      Script: {instanceID: 3248}
     - Class: 114
-      Script: {instanceID: 3746}
+      Script: {instanceID: 3314}
     - Class: 114
-      Script: {instanceID: 3834}
+      Script: {instanceID: 3510}
     - Class: 114
-      Script: {instanceID: 4426}
+      Script: {instanceID: 3810}
     - Class: 114
-      Script: {instanceID: 4502}
+      Script: {instanceID: 3898}
     - Class: 114
-      Script: {instanceID: 57412}
+      Script: {instanceID: 4490}
+    - Class: 114
+      Script: {instanceID: 4566}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -142,6 +150,12 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
@@ -153,15 +167,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1490}
     - Class: 114
-      Script: {instanceID: 2408}
+      Script: {instanceID: 2466}
     - Class: 114
-      Script: {instanceID: 2532}
+      Script: {instanceID: 2590}
     - Class: 114
-      Script: {instanceID: 2714}
+      Script: {instanceID: 2774}
     - Class: 114
-      Script: {instanceID: 3008}
+      Script: {instanceID: 3068}
     - Class: 114
-      Script: {instanceID: 3448}
+      Script: {instanceID: 3510}
+    - Class: 114
+      Script: {instanceID: 59138}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -193,6 +209,12 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
@@ -204,19 +226,21 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1490}
     - Class: 114
-      Script: {instanceID: 2408}
+      Script: {instanceID: 2466}
     - Class: 114
-      Script: {instanceID: 2532}
+      Script: {instanceID: 2590}
     - Class: 114
-      Script: {instanceID: 2714}
+      Script: {instanceID: 2774}
     - Class: 114
-      Script: {instanceID: 3008}
+      Script: {instanceID: 3068}
     - Class: 114
-      Script: {instanceID: 3448}
+      Script: {instanceID: 3248}
     - Class: 114
-      Script: {instanceID: 57412}
+      Script: {instanceID: 3510}
     - Class: 114
-      Script: {instanceID: 57662}
+      Script: {instanceID: 3608}
+    - Class: 114
+      Script: {instanceID: 59138}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -482,7 +506,7 @@ ScriptsOnlyBuild:
     className: SceneAndURLLoader
   - hash:
       serializedVersion: 2
-      Hash: 73d05df52315f94decca029aa0143aea
+      Hash: 0388b51a784440761cb158199c089ec0
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CogerObjectos
@@ -668,6 +692,12 @@ ScriptsOnlyBuild:
     className: TimelineAsset
   - hash:
       serializedVersion: 2
+      Hash: 586c387917df06822167f6f3a8a752a3
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Tutorial
+  - hash:
+      serializedVersion: 2
       Hash: 428923bc6e394f67d7e43c7fdc2bc412
     assemblyName: Assembly-CSharp-firstpass.dll
     namespaceName: UnityStandardAssets.Vehicles.Aeroplane
@@ -722,7 +752,7 @@ ScriptsOnlyBuild:
     className: TouchPad
   - hash:
       serializedVersion: 2
-      Hash: 4d41e8c499f57358a30ba1138b76bca2
+      Hash: 7a3ac4f7664b8c2661a2696cc106971a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: RelojGeneral
@@ -956,6 +986,12 @@ ScriptsOnlyBuild:
     className: ContentSizeFitter
   - hash:
       serializedVersion: 2
+      Hash: 2ac020d794c3453028de8d429b7df255
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DesbloqueoNIveles
+  - hash:
+      serializedVersion: 2
       Hash: 6ff1c52123c50b3d73f35cd0e2e65dfd
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
@@ -992,7 +1028,7 @@ ScriptsOnlyBuild:
     className: SkidTrail
   - hash:
       serializedVersion: 2
-      Hash: 605cc6a7b6ac5ada36eda1be326e85a6
+      Hash: eb5af4091373c879297675d9ac9f2024
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MesaRobot
@@ -1124,6 +1160,12 @@ ScriptsOnlyBuild:
     className: CinemachineTransposer
   - hash:
       serializedVersion: 2
+      Hash: a095cd17f2af28e2313f5ab988eb0103
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: NivelesBloqueados
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
@@ -1244,7 +1286,7 @@ ScriptsOnlyBuild:
     className: AICharacterControl
   - hash:
       serializedVersion: 2
-      Hash: 335c6a50e57f3e199970db9b98f02651
+      Hash: b00a2fac8bd8cb08e49594b81df1fff7
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MovimientoPersonaje
@@ -1274,7 +1316,7 @@ ScriptsOnlyBuild:
     className: GerstnerDisplace
   - hash:
       serializedVersion: 2
-      Hash: a56c50ffabf0dc0b0b5c6197c6aa0495
+      Hash: 4e19a3687d4917b17c9b53eabbdf15ac
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Entregador
@@ -1478,7 +1520,7 @@ ScriptsOnlyBuild:
     className: CinemachineRecomposer
   - hash:
       serializedVersion: 2
-      Hash: 78653dac85653c3ea4d10be5d7a92ed8
+      Hash: 579b1949eb73801cf12dbd2276d751a8
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ImpresoraCircuitos
@@ -1598,19 +1640,13 @@ ScriptsOnlyBuild:
     className: SimpleActivatorMenu
   - hash:
       serializedVersion: 2
-      Hash: 2ac020d794c3453028de8d429b7df255
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: DesbloqueoNIveles
-  - hash:
-      serializedVersion: 2
-      Hash: a095cd17f2af28e2313f5ab988eb0103
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: NivelesBloqueados
+    className: Audio
   platform: 20
   scenePathNames:
   - Assets/Scenes/Inicio.unity
   - Assets/Scenes/menu niveles.unity
   - Assets/Scenes/Game_2.unity
-  playerPath: D:/proyectos unity/Build de Proyectos/Nueva carpeta/webglFDR1.0
+  playerPath: D:/Build/Nueva carpeta
