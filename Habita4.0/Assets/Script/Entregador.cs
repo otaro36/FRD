@@ -28,22 +28,40 @@ public class Entregador : MonoBehaviour
         {
             receta[0].SetActive(true);
             receta[1].SetActive(false);
+            receta[2].SetActive(false);
+
 
         }
-        if (i==1)
+        else if (i==1)
         {
             receta[0].SetActive(false);
             receta[1].SetActive(true);
+            receta[2].SetActive(false);
         }
+        else if (i==2)
+        {
+            receta[0].SetActive(false);
+            receta[1].SetActive(false);
+            receta[2].SetActive(true);
+        }
+        
     }
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag==receta[i].tag)
         {
-            total += 100;
+            if (other.tag== "Carcasa"||other.tag== "ObleaCircuitos")
+            {
+                total += 100;
+            }
+            else if (other.tag== "CeldaEnergia")
+            {
+                total += 200;
+            }
+            
             Destroy(other.gameObject);
             i++;
-            if (i>1)
+            if (i>2)
             {
                 i = 0;
             }

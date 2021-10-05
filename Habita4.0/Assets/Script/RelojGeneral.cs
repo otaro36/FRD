@@ -25,7 +25,6 @@ public class RelojGeneral : MonoBehaviour
     }
     void Start()
     {
-        tiempo = 60;
         //tiempotxt.text = "2:00";
     }
 
@@ -48,11 +47,11 @@ public class RelojGeneral : MonoBehaviour
                 {
                     estrel.sprite = estrellas[1];
                 }
-                else if (monedas.total>=minimoPuntaje*2&&monedas.total<minimoPuntaje*5)
+                else if (monedas.total>=minimoPuntaje*2&&monedas.total<minimoPuntaje*4)
                 {
                     estrel.sprite = estrellas[2];
                 }
-                else if (monedas.total>=minimoPuntaje*5)
+                else if (monedas.total>=minimoPuntaje*4)
                 {
                     estrel.sprite = estrellas[3];
                 }

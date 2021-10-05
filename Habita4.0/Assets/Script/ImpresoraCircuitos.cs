@@ -12,6 +12,7 @@ public class ImpresoraCircuitos : MonoBehaviour
     public int objetoCreado;
     public Timer time;
     public GameObject timer;
+    public Animator anim;
 
     private void Update()
     {
@@ -33,6 +34,10 @@ public class ImpresoraCircuitos : MonoBehaviour
         else if (other.tag != "Player" && other.tag != "Impresora3d")
         {
             Destroy(other.gameObject);
+        }
+        else if (other.tag== "Player")
+        {
+            anim.SetBool("Coger", false);
         }
     }
     IEnumerator Impresion()

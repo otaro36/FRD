@@ -222,8 +222,8 @@ GameObject:
   - component: {fileID: 8256598082380503668}
   - component: {fileID: 8256598082380503670}
   m_Layer: 0
-  m_Name: celdaenergia
-  m_TagString: Olivo
+  m_Name: CeldaEnergia
+  m_TagString: CeldaEnergia
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
