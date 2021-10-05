@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class RobotComeCubos : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject encendido;
+    private void OnTriggerEnter(Collider other)
     {
-        
+        encendido.SetActive(true);
     }
-
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerExit(Collider other)
     {
-        
+        encendido.SetActive(false);
     }
 }

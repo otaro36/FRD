@@ -7,10 +7,16 @@ public class NivelesBloqueados : MonoBehaviour
 {
     public Button[] botones_menu;
     public DesbloqueoNIveles nivelDesbloqueado;
+    public int i;
     // Start is called before the first frame update
 
     void Update()
     {
-        botones_menu[nivelDesbloqueado.nivelDesbloqueado].interactable = true;
+        while (nivelDesbloqueado.nivelDesbloqueado>=i)
+        {
+            botones_menu[i].interactable = true;
+            i++;
+        }
+        
     }
 }

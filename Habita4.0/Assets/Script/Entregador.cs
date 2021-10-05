@@ -18,33 +18,81 @@ public class Entregador : MonoBehaviour
     void Start()
     {
         monedas.text = 0.ToString();
-        i = Random.Range(0, 1);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (i==0)
+        if (i == 0)
         {
             receta[0].SetActive(true);
             receta[1].SetActive(false);
             receta[2].SetActive(false);
-
-
+            receta[3].SetActive(false);
+            receta[4].SetActive(false);
+            receta[5].SetActive(false);
+            receta[6].SetActive(false);
         }
-        else if (i==1)
+        else if (i == 1)
         {
             receta[0].SetActive(false);
             receta[1].SetActive(true);
             receta[2].SetActive(false);
+            receta[3].SetActive(false);
+            receta[4].SetActive(false);
+            receta[5].SetActive(false);
+            receta[6].SetActive(false);
         }
-        else if (i==2)
+        else if (i == 2) 
         {
             receta[0].SetActive(false);
             receta[1].SetActive(false);
             receta[2].SetActive(true);
+            receta[3].SetActive(false);
+            receta[4].SetActive(false);
+            receta[5].SetActive(false);
+            receta[6].SetActive(false);
         }
-        
+        else if (i == 3)
+        {
+            receta[0].SetActive(false);
+            receta[1].SetActive(false);
+            receta[2].SetActive(false);
+            receta[3].SetActive(true);
+            receta[4].SetActive(false);
+            receta[5].SetActive(false);
+            receta[6].SetActive(false);
+        }
+        else if (i == 4)
+        {
+            receta[0].SetActive(false);
+            receta[1].SetActive(false);
+            receta[2].SetActive(false);
+            receta[3].SetActive(false);
+            receta[4].SetActive(true);
+            receta[5].SetActive(false);
+            receta[6].SetActive(false);
+        }
+        else if (i == 5)
+        {
+            receta[0].SetActive(false);
+            receta[1].SetActive(false);
+            receta[2].SetActive(false);
+            receta[3].SetActive(false);
+            receta[4].SetActive(false);
+            receta[5].SetActive(true);
+            receta[6].SetActive(false);
+        }
+        else if (i == 6)
+        {
+            receta[0].SetActive(false);
+            receta[1].SetActive(false);
+            receta[2].SetActive(false);
+            receta[3].SetActive(false);
+            receta[4].SetActive(false);
+            receta[5].SetActive(false);
+            receta[6].SetActive(true);
+        }
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -61,7 +109,7 @@ public class Entregador : MonoBehaviour
             
             Destroy(other.gameObject);
             i++;
-            if (i>2)
+            if (i>6)
             {
                 i = 0;
             }

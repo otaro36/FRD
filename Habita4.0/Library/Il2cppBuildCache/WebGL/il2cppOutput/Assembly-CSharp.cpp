@@ -4432,6 +4432,8 @@ public:
 	ButtonU5BU5D_t2D8C7329F91F78C37FD1A3807DCD4366F7D7EC7B* ___botones_menu_4;
 	// DesbloqueoNIveles NivelesBloqueados::nivelDesbloqueado
 	DesbloqueoNIveles_t42581915A852EF53C4B0C7A59D0E00AE92AD4492 * ___nivelDesbloqueado_5;
+	// System.Int32 NivelesBloqueados::i
+	int32_t ___i_6;
 
 public:
 	inline static int32_t get_offset_of_botones_menu_4() { return static_cast<int32_t>(offsetof(NivelesBloqueados_tA70B2150950404A1CCDF22053357BE84C345C639, ___botones_menu_4)); }
@@ -4450,6 +4452,14 @@ public:
 	{
 		___nivelDesbloqueado_5 = value;
 		Il2CppCodeGenWriteBarrier((void**)(&___nivelDesbloqueado_5), (void*)value);
+	}
+
+	inline static int32_t get_offset_of_i_6() { return static_cast<int32_t>(offsetof(NivelesBloqueados_tA70B2150950404A1CCDF22053357BE84C345C639, ___i_6)); }
+	inline int32_t get_i_6() const { return ___i_6; }
+	inline int32_t* get_address_of_i_6() { return &___i_6; }
+	inline void set_i_6(int32_t value)
+	{
+		___i_6 = value;
 	}
 };
 
@@ -4933,8 +4943,18 @@ public:
 struct RobotComeCubos_t2A889EEF612E315AFE701C6145FE9E0EAE9BEA7E  : public MonoBehaviour_t37A501200D970A8257124B0EAE00A0FF3DDC354A
 {
 public:
+	// UnityEngine.GameObject RobotComeCubos::encendido
+	GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * ___encendido_4;
 
 public:
+	inline static int32_t get_offset_of_encendido_4() { return static_cast<int32_t>(offsetof(RobotComeCubos_t2A889EEF612E315AFE701C6145FE9E0EAE9BEA7E, ___encendido_4)); }
+	inline GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * get_encendido_4() const { return ___encendido_4; }
+	inline GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 ** get_address_of_encendido_4() { return &___encendido_4; }
+	inline void set_encendido_4(GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * value)
+	{
+		___encendido_4 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___encendido_4), (void*)value);
+	}
 };
 
 
@@ -6610,8 +6630,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Rigidbody_set_isKinematic_mCF74D68020554
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScriptableObject__ctor_m8DAE6CDCFA34E16F2543B02CC3669669FF203063 (ScriptableObject_t4361E08CEBF052C650D3666C7CEC37EB31DE116A * __this, const RuntimeMethod* method);
 // System.String System.Int32::ToString()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Int32_ToString_m340C0A14D16799421EFDF8A81C8A16FA76D48411 (int32_t* __this, const RuntimeMethod* method);
-// System.Int32 UnityEngine.Random::Range(System.Int32,System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Random_Range_m4B3A0037ACA057F33C94508F908546B9317D996A (int32_t ___minInclusive0, int32_t ___maxExclusive1, const RuntimeMethod* method);
 // System.String UnityEngine.Component::get_tag()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Component_get_tag_m77B4A7356E58F985216CC53966F7A9699454803E (Component_t62FBC8D2420DA4BE9037AFE430740F6B3EECA684 * __this, const RuntimeMethod* method);
 // System.String UnityEngine.GameObject::get_tag()
@@ -7448,10 +7466,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Entregador_Start_mCA30716EEE837A67C62456
 		String_t* L_1;
 		L_1 = Int32_ToString_m340C0A14D16799421EFDF8A81C8A16FA76D48411((int32_t*)(&V_0), /*hidden argument*/NULL);
 		VirtActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_0, L_1);
-		// i = Random.Range(0, 1);
-		int32_t L_2;
-		L_2 = Random_Range_m4B3A0037ACA057F33C94508F908546B9317D996A(0, 1, /*hidden argument*/NULL);
-		__this->set_i_8(L_2);
 		// }
 		return;
 	}
@@ -7460,11 +7474,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Entregador_Start_mCA30716EEE837A67C62456
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Entregador_Update_mBA8215BECD026C0D78795DB8EB0D929E1F7085BC (Entregador_tAD4D8F801AD818F2479B0322E033DAAA0C18324E * __this, const RuntimeMethod* method)
 {
 	{
-		// if (i==0)
+		// if (i == 0)
 		int32_t L_0 = __this->get_i_8();
 		if (L_0)
 		{
-			goto IL_0033;
+			goto IL_006b;
 		}
 	}
 	{
@@ -7483,67 +7497,323 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Entregador_Update_mBA8215BECD026C0D78795
 		int32_t L_8 = 2;
 		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_9 = (L_7)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_8));
 		GameObject_SetActive_mCF1EEF2A314F3AE85DA581FF52EB06ACEF2FFF86(L_9, (bool)0, /*hidden argument*/NULL);
+		// receta[3].SetActive(false);
+		GameObjectU5BU5D_tA88FC1A1FC9D4D73D0B3984D4B0ECE88F4C47642* L_10 = __this->get_receta_5();
+		int32_t L_11 = 3;
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_12 = (L_10)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_11));
+		GameObject_SetActive_mCF1EEF2A314F3AE85DA581FF52EB06ACEF2FFF86(L_12, (bool)0, /*hidden argument*/NULL);
+		// receta[4].SetActive(false);
+		GameObjectU5BU5D_tA88FC1A1FC9D4D73D0B3984D4B0ECE88F4C47642* L_13 = __this->get_receta_5();
+		int32_t L_14 = 4;
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_15 = (L_13)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_14));
+		GameObject_SetActive_mCF1EEF2A314F3AE85DA581FF52EB06ACEF2FFF86(L_15, (bool)0, /*hidden argument*/NULL);
+		// receta[5].SetActive(false);
+		GameObjectU5BU5D_tA88FC1A1FC9D4D73D0B3984D4B0ECE88F4C47642* L_16 = __this->get_receta_5();
+		int32_t L_17 = 5;
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_18 = (L_16)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_17));
+		GameObject_SetActive_mCF1EEF2A314F3AE85DA581FF52EB06ACEF2FFF86(L_18, (bool)0, /*hidden argument*/NULL);
+		// receta[6].SetActive(false);
+		GameObjectU5BU5D_tA88FC1A1FC9D4D73D0B3984D4B0ECE88F4C47642* L_19 = __this->get_receta_5();
+		int32_t L_20 = 6;
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_21 = (L_19)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_20));
+		GameObject_SetActive_mCF1EEF2A314F3AE85DA581FF52EB06ACEF2FFF86(L_21, (bool)0, /*hidden argument*/NULL);
 		// }
 		return;
 	}
 
-IL_0033:
+IL_006b:
 	{
-		// else if (i==1)
-		int32_t L_10 = __this->get_i_8();
-		if ((!(((uint32_t)L_10) == ((uint32_t)1))))
+		// else if (i == 1)
+		int32_t L_22 = __this->get_i_8();
+		if ((!(((uint32_t)L_22) == ((uint32_t)1))))
 		{
-			goto IL_0067;
+			goto IL_00d7;
 		}
 	}
 	{
 		// receta[0].SetActive(false);
-		GameObjectU5BU5D_tA88FC1A1FC9D4D73D0B3984D4B0ECE88F4C47642* L_11 = __this->get_receta_5();
-		int32_t L_12 = 0;
-		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_13 = (L_11)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_12));
-		GameObject_SetActive_mCF1EEF2A314F3AE85DA581FF52EB06ACEF2FFF86(L_13, (bool)0, /*hidden argument*/NULL);
+		GameObjectU5BU5D_tA88FC1A1FC9D4D73D0B3984D4B0ECE88F4C47642* L_23 = __this->get_receta_5();
+		int32_t L_24 = 0;
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_25 = (L_23)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_24));
+		GameObject_SetActive_mCF1EEF2A314F3AE85DA581FF52EB06ACEF2FFF86(L_25, (bool)0, /*hidden argument*/NULL);
 		// receta[1].SetActive(true);
-		GameObjectU5BU5D_tA88FC1A1FC9D4D73D0B3984D4B0ECE88F4C47642* L_14 = __this->get_receta_5();
-		int32_t L_15 = 1;
-		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_16 = (L_14)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_15));
-		GameObject_SetActive_mCF1EEF2A314F3AE85DA581FF52EB06ACEF2FFF86(L_16, (bool)1, /*hidden argument*/NULL);
+		GameObjectU5BU5D_tA88FC1A1FC9D4D73D0B3984D4B0ECE88F4C47642* L_26 = __this->get_receta_5();
+		int32_t L_27 = 1;
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_28 = (L_26)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_27));
+		GameObject_SetActive_mCF1EEF2A314F3AE85DA581FF52EB06ACEF2FFF86(L_28, (bool)1, /*hidden argument*/NULL);
 		// receta[2].SetActive(false);
-		GameObjectU5BU5D_tA88FC1A1FC9D4D73D0B3984D4B0ECE88F4C47642* L_17 = __this->get_receta_5();
-		int32_t L_18 = 2;
-		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_19 = (L_17)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_18));
-		GameObject_SetActive_mCF1EEF2A314F3AE85DA581FF52EB06ACEF2FFF86(L_19, (bool)0, /*hidden argument*/NULL);
+		GameObjectU5BU5D_tA88FC1A1FC9D4D73D0B3984D4B0ECE88F4C47642* L_29 = __this->get_receta_5();
+		int32_t L_30 = 2;
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_31 = (L_29)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_30));
+		GameObject_SetActive_mCF1EEF2A314F3AE85DA581FF52EB06ACEF2FFF86(L_31, (bool)0, /*hidden argument*/NULL);
+		// receta[3].SetActive(false);
+		GameObjectU5BU5D_tA88FC1A1FC9D4D73D0B3984D4B0ECE88F4C47642* L_32 = __this->get_receta_5();
+		int32_t L_33 = 3;
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_34 = (L_32)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_33));
+		GameObject_SetActive_mCF1EEF2A314F3AE85DA581FF52EB06ACEF2FFF86(L_34, (bool)0, /*hidden argument*/NULL);
+		// receta[4].SetActive(false);
+		GameObjectU5BU5D_tA88FC1A1FC9D4D73D0B3984D4B0ECE88F4C47642* L_35 = __this->get_receta_5();
+		int32_t L_36 = 4;
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_37 = (L_35)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_36));
+		GameObject_SetActive_mCF1EEF2A314F3AE85DA581FF52EB06ACEF2FFF86(L_37, (bool)0, /*hidden argument*/NULL);
+		// receta[5].SetActive(false);
+		GameObjectU5BU5D_tA88FC1A1FC9D4D73D0B3984D4B0ECE88F4C47642* L_38 = __this->get_receta_5();
+		int32_t L_39 = 5;
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_40 = (L_38)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_39));
+		GameObject_SetActive_mCF1EEF2A314F3AE85DA581FF52EB06ACEF2FFF86(L_40, (bool)0, /*hidden argument*/NULL);
+		// receta[6].SetActive(false);
+		GameObjectU5BU5D_tA88FC1A1FC9D4D73D0B3984D4B0ECE88F4C47642* L_41 = __this->get_receta_5();
+		int32_t L_42 = 6;
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_43 = (L_41)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_42));
+		GameObject_SetActive_mCF1EEF2A314F3AE85DA581FF52EB06ACEF2FFF86(L_43, (bool)0, /*hidden argument*/NULL);
 		// }
 		return;
 	}
 
-IL_0067:
+IL_00d7:
 	{
-		// else if (i==2)
-		int32_t L_20 = __this->get_i_8();
-		if ((!(((uint32_t)L_20) == ((uint32_t)2))))
+		// else if (i == 2)
+		int32_t L_44 = __this->get_i_8();
+		if ((!(((uint32_t)L_44) == ((uint32_t)2))))
 		{
-			goto IL_009a;
+			goto IL_0143;
 		}
 	}
 	{
 		// receta[0].SetActive(false);
-		GameObjectU5BU5D_tA88FC1A1FC9D4D73D0B3984D4B0ECE88F4C47642* L_21 = __this->get_receta_5();
-		int32_t L_22 = 0;
-		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_23 = (L_21)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_22));
-		GameObject_SetActive_mCF1EEF2A314F3AE85DA581FF52EB06ACEF2FFF86(L_23, (bool)0, /*hidden argument*/NULL);
+		GameObjectU5BU5D_tA88FC1A1FC9D4D73D0B3984D4B0ECE88F4C47642* L_45 = __this->get_receta_5();
+		int32_t L_46 = 0;
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_47 = (L_45)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_46));
+		GameObject_SetActive_mCF1EEF2A314F3AE85DA581FF52EB06ACEF2FFF86(L_47, (bool)0, /*hidden argument*/NULL);
 		// receta[1].SetActive(false);
-		GameObjectU5BU5D_tA88FC1A1FC9D4D73D0B3984D4B0ECE88F4C47642* L_24 = __this->get_receta_5();
-		int32_t L_25 = 1;
-		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_26 = (L_24)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_25));
-		GameObject_SetActive_mCF1EEF2A314F3AE85DA581FF52EB06ACEF2FFF86(L_26, (bool)0, /*hidden argument*/NULL);
+		GameObjectU5BU5D_tA88FC1A1FC9D4D73D0B3984D4B0ECE88F4C47642* L_48 = __this->get_receta_5();
+		int32_t L_49 = 1;
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_50 = (L_48)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_49));
+		GameObject_SetActive_mCF1EEF2A314F3AE85DA581FF52EB06ACEF2FFF86(L_50, (bool)0, /*hidden argument*/NULL);
 		// receta[2].SetActive(true);
-		GameObjectU5BU5D_tA88FC1A1FC9D4D73D0B3984D4B0ECE88F4C47642* L_27 = __this->get_receta_5();
-		int32_t L_28 = 2;
-		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_29 = (L_27)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_28));
-		GameObject_SetActive_mCF1EEF2A314F3AE85DA581FF52EB06ACEF2FFF86(L_29, (bool)1, /*hidden argument*/NULL);
+		GameObjectU5BU5D_tA88FC1A1FC9D4D73D0B3984D4B0ECE88F4C47642* L_51 = __this->get_receta_5();
+		int32_t L_52 = 2;
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_53 = (L_51)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_52));
+		GameObject_SetActive_mCF1EEF2A314F3AE85DA581FF52EB06ACEF2FFF86(L_53, (bool)1, /*hidden argument*/NULL);
+		// receta[3].SetActive(false);
+		GameObjectU5BU5D_tA88FC1A1FC9D4D73D0B3984D4B0ECE88F4C47642* L_54 = __this->get_receta_5();
+		int32_t L_55 = 3;
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_56 = (L_54)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_55));
+		GameObject_SetActive_mCF1EEF2A314F3AE85DA581FF52EB06ACEF2FFF86(L_56, (bool)0, /*hidden argument*/NULL);
+		// receta[4].SetActive(false);
+		GameObjectU5BU5D_tA88FC1A1FC9D4D73D0B3984D4B0ECE88F4C47642* L_57 = __this->get_receta_5();
+		int32_t L_58 = 4;
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_59 = (L_57)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_58));
+		GameObject_SetActive_mCF1EEF2A314F3AE85DA581FF52EB06ACEF2FFF86(L_59, (bool)0, /*hidden argument*/NULL);
+		// receta[5].SetActive(false);
+		GameObjectU5BU5D_tA88FC1A1FC9D4D73D0B3984D4B0ECE88F4C47642* L_60 = __this->get_receta_5();
+		int32_t L_61 = 5;
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_62 = (L_60)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_61));
+		GameObject_SetActive_mCF1EEF2A314F3AE85DA581FF52EB06ACEF2FFF86(L_62, (bool)0, /*hidden argument*/NULL);
+		// receta[6].SetActive(false);
+		GameObjectU5BU5D_tA88FC1A1FC9D4D73D0B3984D4B0ECE88F4C47642* L_63 = __this->get_receta_5();
+		int32_t L_64 = 6;
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_65 = (L_63)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_64));
+		GameObject_SetActive_mCF1EEF2A314F3AE85DA581FF52EB06ACEF2FFF86(L_65, (bool)0, /*hidden argument*/NULL);
+		// }
+		return;
 	}
 
-IL_009a:
+IL_0143:
+	{
+		// else if (i == 3)
+		int32_t L_66 = __this->get_i_8();
+		if ((!(((uint32_t)L_66) == ((uint32_t)3))))
+		{
+			goto IL_01af;
+		}
+	}
+	{
+		// receta[0].SetActive(false);
+		GameObjectU5BU5D_tA88FC1A1FC9D4D73D0B3984D4B0ECE88F4C47642* L_67 = __this->get_receta_5();
+		int32_t L_68 = 0;
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_69 = (L_67)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_68));
+		GameObject_SetActive_mCF1EEF2A314F3AE85DA581FF52EB06ACEF2FFF86(L_69, (bool)0, /*hidden argument*/NULL);
+		// receta[1].SetActive(false);
+		GameObjectU5BU5D_tA88FC1A1FC9D4D73D0B3984D4B0ECE88F4C47642* L_70 = __this->get_receta_5();
+		int32_t L_71 = 1;
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_72 = (L_70)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_71));
+		GameObject_SetActive_mCF1EEF2A314F3AE85DA581FF52EB06ACEF2FFF86(L_72, (bool)0, /*hidden argument*/NULL);
+		// receta[2].SetActive(false);
+		GameObjectU5BU5D_tA88FC1A1FC9D4D73D0B3984D4B0ECE88F4C47642* L_73 = __this->get_receta_5();
+		int32_t L_74 = 2;
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_75 = (L_73)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_74));
+		GameObject_SetActive_mCF1EEF2A314F3AE85DA581FF52EB06ACEF2FFF86(L_75, (bool)0, /*hidden argument*/NULL);
+		// receta[3].SetActive(true);
+		GameObjectU5BU5D_tA88FC1A1FC9D4D73D0B3984D4B0ECE88F4C47642* L_76 = __this->get_receta_5();
+		int32_t L_77 = 3;
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_78 = (L_76)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_77));
+		GameObject_SetActive_mCF1EEF2A314F3AE85DA581FF52EB06ACEF2FFF86(L_78, (bool)1, /*hidden argument*/NULL);
+		// receta[4].SetActive(false);
+		GameObjectU5BU5D_tA88FC1A1FC9D4D73D0B3984D4B0ECE88F4C47642* L_79 = __this->get_receta_5();
+		int32_t L_80 = 4;
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_81 = (L_79)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_80));
+		GameObject_SetActive_mCF1EEF2A314F3AE85DA581FF52EB06ACEF2FFF86(L_81, (bool)0, /*hidden argument*/NULL);
+		// receta[5].SetActive(false);
+		GameObjectU5BU5D_tA88FC1A1FC9D4D73D0B3984D4B0ECE88F4C47642* L_82 = __this->get_receta_5();
+		int32_t L_83 = 5;
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_84 = (L_82)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_83));
+		GameObject_SetActive_mCF1EEF2A314F3AE85DA581FF52EB06ACEF2FFF86(L_84, (bool)0, /*hidden argument*/NULL);
+		// receta[6].SetActive(false);
+		GameObjectU5BU5D_tA88FC1A1FC9D4D73D0B3984D4B0ECE88F4C47642* L_85 = __this->get_receta_5();
+		int32_t L_86 = 6;
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_87 = (L_85)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_86));
+		GameObject_SetActive_mCF1EEF2A314F3AE85DA581FF52EB06ACEF2FFF86(L_87, (bool)0, /*hidden argument*/NULL);
+		// }
+		return;
+	}
+
+IL_01af:
+	{
+		// else if (i == 4)
+		int32_t L_88 = __this->get_i_8();
+		if ((!(((uint32_t)L_88) == ((uint32_t)4))))
+		{
+			goto IL_021b;
+		}
+	}
+	{
+		// receta[0].SetActive(false);
+		GameObjectU5BU5D_tA88FC1A1FC9D4D73D0B3984D4B0ECE88F4C47642* L_89 = __this->get_receta_5();
+		int32_t L_90 = 0;
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_91 = (L_89)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_90));
+		GameObject_SetActive_mCF1EEF2A314F3AE85DA581FF52EB06ACEF2FFF86(L_91, (bool)0, /*hidden argument*/NULL);
+		// receta[1].SetActive(false);
+		GameObjectU5BU5D_tA88FC1A1FC9D4D73D0B3984D4B0ECE88F4C47642* L_92 = __this->get_receta_5();
+		int32_t L_93 = 1;
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_94 = (L_92)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_93));
+		GameObject_SetActive_mCF1EEF2A314F3AE85DA581FF52EB06ACEF2FFF86(L_94, (bool)0, /*hidden argument*/NULL);
+		// receta[2].SetActive(false);
+		GameObjectU5BU5D_tA88FC1A1FC9D4D73D0B3984D4B0ECE88F4C47642* L_95 = __this->get_receta_5();
+		int32_t L_96 = 2;
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_97 = (L_95)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_96));
+		GameObject_SetActive_mCF1EEF2A314F3AE85DA581FF52EB06ACEF2FFF86(L_97, (bool)0, /*hidden argument*/NULL);
+		// receta[3].SetActive(false);
+		GameObjectU5BU5D_tA88FC1A1FC9D4D73D0B3984D4B0ECE88F4C47642* L_98 = __this->get_receta_5();
+		int32_t L_99 = 3;
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_100 = (L_98)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_99));
+		GameObject_SetActive_mCF1EEF2A314F3AE85DA581FF52EB06ACEF2FFF86(L_100, (bool)0, /*hidden argument*/NULL);
+		// receta[4].SetActive(true);
+		GameObjectU5BU5D_tA88FC1A1FC9D4D73D0B3984D4B0ECE88F4C47642* L_101 = __this->get_receta_5();
+		int32_t L_102 = 4;
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_103 = (L_101)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_102));
+		GameObject_SetActive_mCF1EEF2A314F3AE85DA581FF52EB06ACEF2FFF86(L_103, (bool)1, /*hidden argument*/NULL);
+		// receta[5].SetActive(false);
+		GameObjectU5BU5D_tA88FC1A1FC9D4D73D0B3984D4B0ECE88F4C47642* L_104 = __this->get_receta_5();
+		int32_t L_105 = 5;
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_106 = (L_104)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_105));
+		GameObject_SetActive_mCF1EEF2A314F3AE85DA581FF52EB06ACEF2FFF86(L_106, (bool)0, /*hidden argument*/NULL);
+		// receta[6].SetActive(false);
+		GameObjectU5BU5D_tA88FC1A1FC9D4D73D0B3984D4B0ECE88F4C47642* L_107 = __this->get_receta_5();
+		int32_t L_108 = 6;
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_109 = (L_107)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_108));
+		GameObject_SetActive_mCF1EEF2A314F3AE85DA581FF52EB06ACEF2FFF86(L_109, (bool)0, /*hidden argument*/NULL);
+		// }
+		return;
+	}
+
+IL_021b:
+	{
+		// else if (i == 5)
+		int32_t L_110 = __this->get_i_8();
+		if ((!(((uint32_t)L_110) == ((uint32_t)5))))
+		{
+			goto IL_0287;
+		}
+	}
+	{
+		// receta[0].SetActive(false);
+		GameObjectU5BU5D_tA88FC1A1FC9D4D73D0B3984D4B0ECE88F4C47642* L_111 = __this->get_receta_5();
+		int32_t L_112 = 0;
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_113 = (L_111)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_112));
+		GameObject_SetActive_mCF1EEF2A314F3AE85DA581FF52EB06ACEF2FFF86(L_113, (bool)0, /*hidden argument*/NULL);
+		// receta[1].SetActive(false);
+		GameObjectU5BU5D_tA88FC1A1FC9D4D73D0B3984D4B0ECE88F4C47642* L_114 = __this->get_receta_5();
+		int32_t L_115 = 1;
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_116 = (L_114)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_115));
+		GameObject_SetActive_mCF1EEF2A314F3AE85DA581FF52EB06ACEF2FFF86(L_116, (bool)0, /*hidden argument*/NULL);
+		// receta[2].SetActive(false);
+		GameObjectU5BU5D_tA88FC1A1FC9D4D73D0B3984D4B0ECE88F4C47642* L_117 = __this->get_receta_5();
+		int32_t L_118 = 2;
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_119 = (L_117)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_118));
+		GameObject_SetActive_mCF1EEF2A314F3AE85DA581FF52EB06ACEF2FFF86(L_119, (bool)0, /*hidden argument*/NULL);
+		// receta[3].SetActive(false);
+		GameObjectU5BU5D_tA88FC1A1FC9D4D73D0B3984D4B0ECE88F4C47642* L_120 = __this->get_receta_5();
+		int32_t L_121 = 3;
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_122 = (L_120)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_121));
+		GameObject_SetActive_mCF1EEF2A314F3AE85DA581FF52EB06ACEF2FFF86(L_122, (bool)0, /*hidden argument*/NULL);
+		// receta[4].SetActive(false);
+		GameObjectU5BU5D_tA88FC1A1FC9D4D73D0B3984D4B0ECE88F4C47642* L_123 = __this->get_receta_5();
+		int32_t L_124 = 4;
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_125 = (L_123)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_124));
+		GameObject_SetActive_mCF1EEF2A314F3AE85DA581FF52EB06ACEF2FFF86(L_125, (bool)0, /*hidden argument*/NULL);
+		// receta[5].SetActive(true);
+		GameObjectU5BU5D_tA88FC1A1FC9D4D73D0B3984D4B0ECE88F4C47642* L_126 = __this->get_receta_5();
+		int32_t L_127 = 5;
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_128 = (L_126)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_127));
+		GameObject_SetActive_mCF1EEF2A314F3AE85DA581FF52EB06ACEF2FFF86(L_128, (bool)1, /*hidden argument*/NULL);
+		// receta[6].SetActive(false);
+		GameObjectU5BU5D_tA88FC1A1FC9D4D73D0B3984D4B0ECE88F4C47642* L_129 = __this->get_receta_5();
+		int32_t L_130 = 6;
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_131 = (L_129)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_130));
+		GameObject_SetActive_mCF1EEF2A314F3AE85DA581FF52EB06ACEF2FFF86(L_131, (bool)0, /*hidden argument*/NULL);
+		// }
+		return;
+	}
+
+IL_0287:
+	{
+		// else if (i == 6)
+		int32_t L_132 = __this->get_i_8();
+		if ((!(((uint32_t)L_132) == ((uint32_t)6))))
+		{
+			goto IL_02f2;
+		}
+	}
+	{
+		// receta[0].SetActive(false);
+		GameObjectU5BU5D_tA88FC1A1FC9D4D73D0B3984D4B0ECE88F4C47642* L_133 = __this->get_receta_5();
+		int32_t L_134 = 0;
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_135 = (L_133)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_134));
+		GameObject_SetActive_mCF1EEF2A314F3AE85DA581FF52EB06ACEF2FFF86(L_135, (bool)0, /*hidden argument*/NULL);
+		// receta[1].SetActive(false);
+		GameObjectU5BU5D_tA88FC1A1FC9D4D73D0B3984D4B0ECE88F4C47642* L_136 = __this->get_receta_5();
+		int32_t L_137 = 1;
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_138 = (L_136)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_137));
+		GameObject_SetActive_mCF1EEF2A314F3AE85DA581FF52EB06ACEF2FFF86(L_138, (bool)0, /*hidden argument*/NULL);
+		// receta[2].SetActive(false);
+		GameObjectU5BU5D_tA88FC1A1FC9D4D73D0B3984D4B0ECE88F4C47642* L_139 = __this->get_receta_5();
+		int32_t L_140 = 2;
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_141 = (L_139)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_140));
+		GameObject_SetActive_mCF1EEF2A314F3AE85DA581FF52EB06ACEF2FFF86(L_141, (bool)0, /*hidden argument*/NULL);
+		// receta[3].SetActive(false);
+		GameObjectU5BU5D_tA88FC1A1FC9D4D73D0B3984D4B0ECE88F4C47642* L_142 = __this->get_receta_5();
+		int32_t L_143 = 3;
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_144 = (L_142)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_143));
+		GameObject_SetActive_mCF1EEF2A314F3AE85DA581FF52EB06ACEF2FFF86(L_144, (bool)0, /*hidden argument*/NULL);
+		// receta[4].SetActive(false);
+		GameObjectU5BU5D_tA88FC1A1FC9D4D73D0B3984D4B0ECE88F4C47642* L_145 = __this->get_receta_5();
+		int32_t L_146 = 4;
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_147 = (L_145)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_146));
+		GameObject_SetActive_mCF1EEF2A314F3AE85DA581FF52EB06ACEF2FFF86(L_147, (bool)0, /*hidden argument*/NULL);
+		// receta[5].SetActive(false);
+		GameObjectU5BU5D_tA88FC1A1FC9D4D73D0B3984D4B0ECE88F4C47642* L_148 = __this->get_receta_5();
+		int32_t L_149 = 5;
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_150 = (L_148)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_149));
+		GameObject_SetActive_mCF1EEF2A314F3AE85DA581FF52EB06ACEF2FFF86(L_150, (bool)0, /*hidden argument*/NULL);
+		// receta[6].SetActive(true);
+		GameObjectU5BU5D_tA88FC1A1FC9D4D73D0B3984D4B0ECE88F4C47642* L_151 = __this->get_receta_5();
+		int32_t L_152 = 6;
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_153 = (L_151)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_152));
+		GameObject_SetActive_mCF1EEF2A314F3AE85DA581FF52EB06ACEF2FFF86(L_153, (bool)1, /*hidden argument*/NULL);
+	}
+
+IL_02f2:
 	{
 		// }
 		return;
@@ -7644,9 +7914,9 @@ IL_007b:
 		// i++;
 		int32_t L_21 = __this->get_i_8();
 		__this->set_i_8(((int32_t)il2cpp_codegen_add((int32_t)L_21, (int32_t)1)));
-		// if (i>2)
+		// if (i>6)
 		int32_t L_22 = __this->get_i_8();
-		if ((((int32_t)L_22) <= ((int32_t)2)))
+		if ((((int32_t)L_22) <= ((int32_t)6)))
 		{
 			goto IL_0116;
 		}
@@ -8834,13 +9104,34 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MovimientoPersonaje__ctor_m758FFF290060F
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NivelesBloqueados_Update_m2D87A05D790D20003A5126A9254B17DD9F08A0D3 (NivelesBloqueados_tA70B2150950404A1CCDF22053357BE84C345C639 * __this, const RuntimeMethod* method)
 {
 	{
-		// botones_menu[nivelDesbloqueado.nivelDesbloqueado].interactable = true;
+		goto IL_0023;
+	}
+
+IL_0002:
+	{
+		// botones_menu[i].interactable = true;
 		ButtonU5BU5D_t2D8C7329F91F78C37FD1A3807DCD4366F7D7EC7B* L_0 = __this->get_botones_menu_4();
-		DesbloqueoNIveles_t42581915A852EF53C4B0C7A59D0E00AE92AD4492 * L_1 = __this->get_nivelDesbloqueado_5();
-		int32_t L_2 = L_1->get_nivelDesbloqueado_4();
-		int32_t L_3 = L_2;
-		Button_tA893FC15AB26E1439AC25BDCA7079530587BB65D * L_4 = (L_0)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_3));
-		Selectable_set_interactable_mE6F57D33A9E0484377174D0F490C4372BF7F0D40(L_4, (bool)1, /*hidden argument*/NULL);
+		int32_t L_1 = __this->get_i_6();
+		int32_t L_2 = L_1;
+		Button_tA893FC15AB26E1439AC25BDCA7079530587BB65D * L_3 = (L_0)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_2));
+		Selectable_set_interactable_mE6F57D33A9E0484377174D0F490C4372BF7F0D40(L_3, (bool)1, /*hidden argument*/NULL);
+		// i++;
+		int32_t L_4 = __this->get_i_6();
+		__this->set_i_6(((int32_t)il2cpp_codegen_add((int32_t)L_4, (int32_t)1)));
+	}
+
+IL_0023:
+	{
+		// while (nivelDesbloqueado.nivelDesbloqueado>=i)
+		DesbloqueoNIveles_t42581915A852EF53C4B0C7A59D0E00AE92AD4492 * L_5 = __this->get_nivelDesbloqueado_5();
+		int32_t L_6 = L_5->get_nivelDesbloqueado_4();
+		int32_t L_7 = __this->get_i_6();
+		if ((((int32_t)L_6) >= ((int32_t)L_7)))
+		{
+			goto IL_0002;
+		}
+	}
+	{
 		// }
 		return;
 	}
@@ -10381,18 +10672,24 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RelojGeneral__ctor_mB20A3C6BFA465D4D3A12
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// System.Void RobotComeCubos::Start()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RobotComeCubos_Start_m5EA3C78F0D49D82C2214070C820EF20233AE2152 (RobotComeCubos_t2A889EEF612E315AFE701C6145FE9E0EAE9BEA7E * __this, const RuntimeMethod* method)
+// System.Void RobotComeCubos::OnTriggerEnter(UnityEngine.Collider)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RobotComeCubos_OnTriggerEnter_m7F931C5C9A631135B36792C8C4581D77735997B6 (RobotComeCubos_t2A889EEF612E315AFE701C6145FE9E0EAE9BEA7E * __this, Collider_t5E81E43C2ECA0209A7C4528E84A632712D192B02 * ___other0, const RuntimeMethod* method)
 {
 	{
+		// encendido.SetActive(true);
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_0 = __this->get_encendido_4();
+		GameObject_SetActive_mCF1EEF2A314F3AE85DA581FF52EB06ACEF2FFF86(L_0, (bool)1, /*hidden argument*/NULL);
 		// }
 		return;
 	}
 }
-// System.Void RobotComeCubos::Update()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RobotComeCubos_Update_mCA99C5BFEB01E0CE3828AEE717986EC32E6FD680 (RobotComeCubos_t2A889EEF612E315AFE701C6145FE9E0EAE9BEA7E * __this, const RuntimeMethod* method)
+// System.Void RobotComeCubos::OnTriggerExit(UnityEngine.Collider)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RobotComeCubos_OnTriggerExit_m4CDEFF12DD8433DB3A7E3096898CD8C6CADE8727 (RobotComeCubos_t2A889EEF612E315AFE701C6145FE9E0EAE9BEA7E * __this, Collider_t5E81E43C2ECA0209A7C4528E84A632712D192B02 * ___other0, const RuntimeMethod* method)
 {
 	{
+		// encendido.SetActive(false);
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_0 = __this->get_encendido_4();
+		GameObject_SetActive_mCF1EEF2A314F3AE85DA581FF52EB06ACEF2FFF86(L_0, (bool)0, /*hidden argument*/NULL);
 		// }
 		return;
 	}

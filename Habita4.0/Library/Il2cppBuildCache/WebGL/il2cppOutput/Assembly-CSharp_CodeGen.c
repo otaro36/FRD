@@ -220,10 +220,10 @@ extern void RelojGeneral_Update_m7F9CE35D1900530B40261EF8928B19CD7C585811 (void)
 extern void RelojGeneral_CalcularTiempo_m088C3C9321891E5EB97BB233DB79D463F8006406 (void);
 // 0x00000068 System.Void RelojGeneral::.ctor()
 extern void RelojGeneral__ctor_mB20A3C6BFA465D4D3A12B17386E5E5F74D2A0DC9 (void);
-// 0x00000069 System.Void RobotComeCubos::Start()
-extern void RobotComeCubos_Start_m5EA3C78F0D49D82C2214070C820EF20233AE2152 (void);
-// 0x0000006A System.Void RobotComeCubos::Update()
-extern void RobotComeCubos_Update_mCA99C5BFEB01E0CE3828AEE717986EC32E6FD680 (void);
+// 0x00000069 System.Void RobotComeCubos::OnTriggerEnter(UnityEngine.Collider)
+extern void RobotComeCubos_OnTriggerEnter_m7F931C5C9A631135B36792C8C4581D77735997B6 (void);
+// 0x0000006A System.Void RobotComeCubos::OnTriggerExit(UnityEngine.Collider)
+extern void RobotComeCubos_OnTriggerExit_m4CDEFF12DD8433DB3A7E3096898CD8C6CADE8727 (void);
 // 0x0000006B System.Void RobotComeCubos::.ctor()
 extern void RobotComeCubos__ctor_mE4220408DE7F39D2BD36B325BDEDDEFDF3F775BD (void);
 // 0x0000006C System.Void DesbloqueoNIveles::Start()
@@ -418,8 +418,8 @@ static Il2CppMethodPointer s_methodPointers[150] =
 	RelojGeneral_Update_m7F9CE35D1900530B40261EF8928B19CD7C585811,
 	RelojGeneral_CalcularTiempo_m088C3C9321891E5EB97BB233DB79D463F8006406,
 	RelojGeneral__ctor_mB20A3C6BFA465D4D3A12B17386E5E5F74D2A0DC9,
-	RobotComeCubos_Start_m5EA3C78F0D49D82C2214070C820EF20233AE2152,
-	RobotComeCubos_Update_mCA99C5BFEB01E0CE3828AEE717986EC32E6FD680,
+	RobotComeCubos_OnTriggerEnter_m7F931C5C9A631135B36792C8C4581D77735997B6,
+	RobotComeCubos_OnTriggerExit_m4CDEFF12DD8433DB3A7E3096898CD8C6CADE8727,
 	RobotComeCubos__ctor_mE4220408DE7F39D2BD36B325BDEDDEFDF3F775BD,
 	DesbloqueoNIveles_Start_mEF2CE18901E405D2299C1B41716EA43AA2F1477C,
 	DesbloqueoNIveles_Update_m46381592C0F0195CF03E5FB98A14CC66621B8576,
@@ -571,8 +571,8 @@ static const int32_t s_InvokerIndices[150] =
 	1192,
 	1192,
 	1192,
-	1192,
-	1192,
+	1020,
+	1020,
 	1192,
 	1192,
 	1192,

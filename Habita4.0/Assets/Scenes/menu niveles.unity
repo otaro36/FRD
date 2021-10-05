@@ -262,15 +262,8 @@ MonoBehaviour:
   botones_menu:
   - {fileID: 191957780}
   - {fileID: 1279637544}
-  - {fileID: 167101992}
-  - {fileID: 1458474930}
-  - {fileID: 546759651}
-  - {fileID: 921344798}
-  - {fileID: 1615844882}
-  - {fileID: 416468118}
-  - {fileID: 1036251963}
-  - {fileID: 1574557932}
   nivelDesbloqueado: {fileID: 11400000, guid: 9b3703fca14cb194296d3754fd2c7192, type: 2}
+  i: 0
 --- !u!1 &167101988
 GameObject:
   m_ObjectHideFlags: 0
@@ -1114,7 +1107,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
